@@ -52,7 +52,7 @@ sensor:
 
 ## Instalation
 
-Download [*binary_sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/binary_sensor.py), [*sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/sensor.py) and [manifest.json](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/manifest.json) to `config/custom_compoments/antistorm` folder:
+Download [*binary_sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/binary_sensor.py), [*sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/sensor.py) and [*manifest.json*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/manifest.json) to `config/custom_compoments/antistorm` directory:
 ```bash
 mkdir -p custom_compoments/antistorm
 cd custom_compoments/antistorm
