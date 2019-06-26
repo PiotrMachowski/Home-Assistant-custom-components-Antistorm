@@ -52,10 +52,10 @@ sensor:
 
 ## Instalation
 
-Download [*binary_sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/binary_sensor.py), [*sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/sensor.py) and [*manifest.json*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/manifest.json) to `config/custom_compoments/antistorm` directory:
+Download [*binary_sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/binary_sensor.py), [*sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/sensor.py) and [*manifest.json*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/manifest.json) to `config/custom_components/antistorm` directory:
 ```bash
-mkdir -p custom_compoments/antistorm
-cd custom_compoments/antistorm
+mkdir -p custom_components/antistorm
+cd custom_components/antistorm
 wget https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/binary_sensor.py
 wget https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/sensor.py
 wget https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/manifest.json
