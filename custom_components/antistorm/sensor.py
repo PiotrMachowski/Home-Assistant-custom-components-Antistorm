@@ -16,10 +16,10 @@ CONF_STATION_ID = 'station_id'
 DEFAULT_NAME = 'Antistorm'
 
 SENSOR_TYPES = {
-    'storm_probability': ['p_b', 'Prawdopodobieństwo burzy', ' '],
-    'storm_time': ['t_b', 'Czas do burzy', ' '],
-    'rain_probability': ['p_o', 'Prawdopodobieństwo opadów', ' '],
-    'rain_time': ['t_o', 'Czas do opadów', ' '],
+    'storm_probability': ['p_b', 'Prawdopodobieństwo burzy', ' ', 'mdi:weather-lightning'],
+    'storm_time': ['t_b', 'Czas do burzy', ' ', 'mdi:weather-lightning'],
+    'rain_probability': ['p_o', 'Prawdopodobieństwo opadów', ' ', 'mdi:weather-pouring'],
+    'rain_time': ['t_o', 'Czas do opadów', ' ', 'mdi:weather-pouring'],
 }
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -61,6 +61,10 @@ class AntistormSensor(Entity):
     @property
     def name(self):
         return '{} {} - {}'.format(self._name, self.city_name, SENSOR_TYPES[self.sensor_type][1])
+
+    @property
+    def icon(self):
+        return SENSOR_TYPES[self.sensor_type][3]
 
     @property
     def state(self):

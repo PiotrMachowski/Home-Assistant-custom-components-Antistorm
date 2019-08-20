@@ -16,9 +16,9 @@ CONF_STATION_ID = 'station_id'
 DEFAULT_NAME = 'Antistorm'
 
 SENSOR_TYPES = {
-    'storm_alarm': ['a_b', 'Alarm burzowy'],
-    'rain_alarm': ['a_o', 'Alarm opadów'],
-    'storm_active': ['s', 'Aktywna burza'],
+    'storm_alarm': ['a_b', 'Alarm burzowy', 'mdi:weather-lightning'],
+    'rain_alarm': ['a_o', 'Alarm opadów', 'mdi:weather-pouring'],
+    'storm_active': ['s', 'Aktywna burza', 'mdi:weather-lightning-rainy'],
 }
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -59,6 +59,10 @@ class AntistormBinarySensor(BinarySensorDevice):
     @property
     def name(self):
         return '{} {} - {}'.format(self._name, self.city_name, SENSOR_TYPES[self.sensor_type][1])
+
+    @property
+    def icon(self):
+        return SENSOR_TYPES[self.sensor_type][2]
 
     @property
     def is_on(self):
