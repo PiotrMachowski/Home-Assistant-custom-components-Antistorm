@@ -1,0 +1,5 @@
+{
+  "name": "Antistorm sensor",
+  "domains": ["binary_sensor", "sensor"],
+  "country": ["PL"]
+}
