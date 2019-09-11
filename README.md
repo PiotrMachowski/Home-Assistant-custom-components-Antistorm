@@ -1,5 +1,7 @@
 # Antistorm sensor
 
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
+
 This sensor uses official API to get storm warnings from [*Antistorm*](https://antistorm.eu/). For more precise explanation of parameters visit [*Antistorm.eu*](https://antistorm.eu/deweloperzy.php).
 
 ## Configuration options
