@@ -52,7 +52,7 @@ sensor:
       - 'rain_time'
 ```
 
-## Instalation
+## Installation
 
 Download [*binary_sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/custom_components/antistorm/binary_sensor.py), [*sensor.py*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/custom_components/antistorm/sensor.py) and [*manifest.json*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/raw/master/custom_components/antistorm/manifest.json) to `config/custom_components/antistorm` directory:
 ```bash
