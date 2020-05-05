@@ -4,7 +4,7 @@ import requests
 import voluptuous as vol
 
 from homeassistant.components.binary_sensor import PLATFORM_SCHEMA, ENTITY_ID_FORMAT
-from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME
+from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME, ATTR_ATTRIBUTION
 import homeassistant.helpers.config_validation as cv
 from homeassistant.components.binary_sensor import BinarySensorDevice
 from homeassistant.helpers.entity import async_generate_entity_id
