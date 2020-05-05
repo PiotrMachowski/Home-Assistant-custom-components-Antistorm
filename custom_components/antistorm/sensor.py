@@ -59,6 +59,12 @@ class AntistormSensor(Entity):
         self._unit_of_measurement = SENSOR_TYPES[sensor_type][2]
 
     @property
+    def device_state_attributes(self):
+        output = dict()
+        output[ATTR_ATTRIBUTION] = ATTRIBUTION
+        return output
+
+    @property
     def name(self):
         return '{} {} - {}'.format(self._name, self.city_name, SENSOR_TYPES[self.sensor_type][1])
 
