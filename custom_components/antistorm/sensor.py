@@ -4,7 +4,7 @@ import requests
 import voluptuous as vol
 
 from homeassistant.components.sensor import (PLATFORM_SCHEMA, ENTITY_ID_FORMAT)
-from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME
+from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME, ATTR_ATTRIBUTION
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers.entity import async_generate_entity_id
@@ -14,6 +14,7 @@ _LOGGER = logging.getLogger(__name__)
 CONF_STATION_ID = 'station_id'
 
 DEFAULT_NAME = 'Antistorm'
+ATTRIBUTION = 'Information provided by Antistorm.eu.'
 
 SENSOR_TYPES = {
     'storm_probability': ['p_b', 'Prawdopodobieństwo burzy', ' ', 'mdi:weather-lightning'],
@@ -57,6 +58,12 @@ class AntistormSensor(Entity):
         self._jsonParameter = SENSOR_TYPES[sensor_type][0]
         self._name = SENSOR_TYPES[sensor_type][1]
         self._unit_of_measurement = SENSOR_TYPES[sensor_type][2]
+
+    @property
+    def device_state_attributes(self):
+        output = dict()
+        output[ATTR_ATTRIBUTION] = ATTRIBUTION
+        return output
 
     @property
     def name(self):

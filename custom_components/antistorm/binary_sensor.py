@@ -4,7 +4,7 @@ import requests
 import voluptuous as vol
 
 from homeassistant.components.binary_sensor import PLATFORM_SCHEMA, ENTITY_ID_FORMAT
-from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME
+from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME, ATTR_ATTRIBUTION
 import homeassistant.helpers.config_validation as cv
 from homeassistant.components.binary_sensor import BinarySensorDevice
 from homeassistant.helpers.entity import async_generate_entity_id
@@ -14,6 +14,7 @@ _LOGGER = logging.getLogger(__name__)
 CONF_STATION_ID = 'station_id'
 
 DEFAULT_NAME = 'Antistorm'
+ATTRIBUTION = 'Information provided by Antistorm.eu.'
 
 SENSOR_TYPES = {
     'storm_alarm': ['a_b', 'Alarm burzowy', 'mdi:weather-lightning'],
@@ -55,6 +56,12 @@ class AntistormBinarySensor(BinarySensorDevice):
         self._state = None
         self._jsonParameter = SENSOR_TYPES[sensor_type][0]
         self._name = SENSOR_TYPES[sensor_type][1]
+
+    @property
+    def device_state_attributes(self):
+        output = dict()
+        output[ATTR_ATTRIBUTION] = ATTRIBUTION
+        return output
 
     @property
     def name(self):
