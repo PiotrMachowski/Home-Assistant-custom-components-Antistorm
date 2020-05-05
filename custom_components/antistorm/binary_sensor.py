@@ -55,6 +55,12 @@ class AntistormBinarySensor(BinarySensorDevice):
         self._state = None
         self._jsonParameter = SENSOR_TYPES[sensor_type][0]
         self._name = SENSOR_TYPES[sensor_type][1]
+        
+    @property
+    def device_state_attributes(self):
+        output = dict()
+        output[ATTR_ATTRIBUTION] = ATTRIBUTION
+        return output
 
     @property
     def name(self):
