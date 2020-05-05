@@ -14,6 +14,7 @@ _LOGGER = logging.getLogger(__name__)
 CONF_STATION_ID = 'station_id'
 
 DEFAULT_NAME = 'Antistorm'
+ATTRIBUTION = 'Information provided by Antistorm.eu.'
 
 SENSOR_TYPES = {
     'storm_alarm': ['a_b', 'Alarm burzowy', 'mdi:weather-lightning'],
