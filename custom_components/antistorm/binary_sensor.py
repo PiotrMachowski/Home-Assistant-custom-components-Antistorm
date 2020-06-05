@@ -6,7 +6,10 @@ import voluptuous as vol
 from homeassistant.components.binary_sensor import PLATFORM_SCHEMA, ENTITY_ID_FORMAT
 from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME, ATTR_ATTRIBUTION
 import homeassistant.helpers.config_validation as cv
-from homeassistant.components.binary_sensor import BinarySensorDevice
+try:
+    from homeassistant.components.binary_sensor import BinarySensorEntity
+except ImportError:
+    from homeassistant.components.binary_sensor import BinarySensorDevice as BinarySensorEntity
 from homeassistant.helpers.entity import async_generate_entity_id
 
 _LOGGER = logging.getLogger(__name__)
@@ -45,7 +48,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
     add_entities(dev, True)
 
 
-class AntistormBinarySensor(BinarySensorDevice):
+class AntistormBinarySensor(BinarySensorEntity):
     def __init__(self, entity_id, name, city_name, sensor_type, station_id):
         self.entity_id = entity_id
         self._name = name
