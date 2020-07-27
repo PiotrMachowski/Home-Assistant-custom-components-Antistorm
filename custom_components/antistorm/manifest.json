@@ -3,6 +3,6 @@
   "name": "Antistorm",
   "documentation": "https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm",
   "dependencies": [],
-  "codeowners": ["PiotrMachowski"],
+  "codeowners": ["@PiotrMachowski"],
   "requirements": ["requests"]
 }
