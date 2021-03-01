@@ -4,5 +4,6 @@
   "documentation": "https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm",
   "dependencies": [],
   "codeowners": ["@PiotrMachowski"],
-  "requirements": ["requests"]
+  "requirements": ["requests"],
+  "version": "1.0.2"
 }
