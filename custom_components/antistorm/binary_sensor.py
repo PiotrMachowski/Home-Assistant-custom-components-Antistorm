@@ -3,7 +3,7 @@ import requests
 
 import voluptuous as vol
 
-from homeassistant.components.binary_sensor import PLATFORM_SCHEMA, ENTITY_ID_FORMAT
+from homeassistant.components.binary_sensor import DEVICE_CLASS_SAFETY, PLATFORM_SCHEMA, ENTITY_ID_FORMAT
 from homeassistant.const import CONF_MONITORED_CONDITIONS, CONF_NAME, ATTR_ATTRIBUTION
 import homeassistant.helpers.config_validation as cv
 try:
@@ -77,6 +77,10 @@ class AntistormBinarySensor(BinarySensorEntity):
     @property
     def is_on(self):
         return self.data is not None and int(self.data[self._jsonParameter]) > 0
+
+    @property
+    def device_class(self):
+        return DEVICE_CLASS_SAFETY
 
     def update(self):
         address = 'http://antistorm.eu/webservice.php?id=' + str(self.station_id)
