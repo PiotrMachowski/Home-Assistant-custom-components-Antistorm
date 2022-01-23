@@ -82,7 +82,7 @@ To do it search for `Antistorm` in *Integrations* section.
 
 ### Manual
 
-To install this integration manually you have to download [*antistorm.zip*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/releases/latest/download/antistorm.zip) extract its contents to `config/custom_components/antistorm` directory:
+To install this integration manually you have to download [*antistorm.zip*](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/releases/latest/download/antistorm.zip) and extract its contents to `config/custom_components/antistorm` directory:
 ```bash
 mkdir -p custom_components/antistorm
 cd custom_components/antistorm
