@@ -2,6 +2,7 @@
   "name": "Antistorm sensor",
   "domains": ["binary_sensor", "sensor"],
   "country": ["PL"],
+  "render_readme": true,
   "zip_release": true,
   "filename": "antistorm.zip"
 }
