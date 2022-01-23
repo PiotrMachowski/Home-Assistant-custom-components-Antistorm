@@ -2,8 +2,10 @@
   "domain": "antistorm",
   "name": "Antistorm",
   "documentation": "https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm",
+  "issue_tracker": "https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/issues",
   "dependencies": [],
   "codeowners": ["@PiotrMachowski"],
   "requirements": ["requests"],
-  "version": "v1.0.3"
+  "version": "v1.0.4",
+  "iot_class": "cloud_polling"
 }
