@@ -7,7 +7,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .update_coordinator import AntistormUpdateCoordinator
 from .connector import AntistormData
-from .const import ATTRIBUTION, DEFAULT_NAME, DOMAIN, CONF_CITY_ID, API_URL
+from .const import ATTRIBUTION, DEFAULT_NAME, DOMAIN, CONF_CITY_ID, BASE_URL
 
 
 class AntistormEntity(CoordinatorEntity):
@@ -37,5 +37,5 @@ class AntistormEntity(CoordinatorEntity):
         return {
             "identifiers": {(DOMAIN, city_id)},
             "name": self.base_name(),
-            "configuration_url": API_URL,
+            "configuration_url": BASE_URL,
         }
