@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Provide a city name.",
+        "data": {
+          "city_name": "City name"
+        }
+      }
+    },
+    "error": {
+      "city_not_found": "City not found"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "storm_alarm": {
+        "name": "Storm Alarm"
+      },
+      "rain_alarm": {
+        "name": "Rain Alarm"
+      },
+      "storm_active": {
+        "name": "Storm Active"
+      }
+    },
+    "sensor": {
+      "storm_probability": {
+        "name": "Storm Probability"
+      },
+      "storm_time": {
+        "name": "Time to Storm"
+      },
+      "precipitation_probability": {
+        "name": "Precipitation Probability"
+      },
+      "precipitation_time": {
+        "name": "Time to Precipitation"
+      }
+    }
+  }
+}

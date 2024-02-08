@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Podaj nazwę miasta.",
+        "data": {
+          "city_name": "Nazwa miasta"
+        }
+      }
+    },
+    "error": {
+      "city_not_found": "Podano nieprawidłowe miasto"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "storm_alarm": {
+        "name": "Alarm Burzowy"
+      },
+      "rain_alarm": {
+        "name": "Alarm Opadów"
+      },
+      "storm_active": {
+        "name": "Aktywna Burza"
+      }
+    },
+    "sensor": {
+      "storm_probability": {
+        "name": "Prawdopodobieństwo Burzy"
+      },
+      "storm_time": {
+        "name": "Czas do Burzy"
+      },
+      "precipitation_probability": {
+        "name": "Prawdopodobieństwo Opadów"
+      },
+      "precipitation_time": {
+        "name": "Czas do Opadów"
+      }
+    }
+  }
+}
