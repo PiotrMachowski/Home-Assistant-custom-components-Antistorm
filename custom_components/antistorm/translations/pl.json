@@ -2,14 +2,14 @@
   "config": {
     "step": {
       "user": {
-        "description": "Podaj nazwę miasta.",
+        "description": "Podaj nazwę miasta dla którego chcesz skonfigurować integrację.",
         "data": {
           "city_name": "Nazwa miasta"
         }
       }
     },
     "error": {
-      "city_not_found": "Podano nieprawidłowe miasto"
+      "city_not_found": "Nie znaleziono miasta"
     }
   },
   "entity": {

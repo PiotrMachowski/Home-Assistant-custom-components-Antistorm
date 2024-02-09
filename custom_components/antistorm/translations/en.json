@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "description": "Provide a city name.",
+        "description": "Provide a city name that you want to configure.",
         "data": {
           "city_name": "City name"
         }
