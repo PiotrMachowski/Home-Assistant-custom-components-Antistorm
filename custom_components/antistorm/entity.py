@@ -12,7 +12,7 @@ from .const import ATTRIBUTION, DEFAULT_NAME, DOMAIN, CONF_CITY_ID, BASE_URL
 
 class AntistormEntity(CoordinatorEntity):
 
-    def __init__(self, coordinator: AntistormUpdateCoordinator, config_entry: ConfigEntry):
+    def __init__(self, coordinator: AntistormUpdateCoordinator, config_entry: ConfigEntry) -> None:
         super().__init__(coordinator)
         self.config_entry = config_entry
         self.city_id = config_entry.data[CONF_CITY_ID]

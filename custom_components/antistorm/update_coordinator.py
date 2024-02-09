@@ -11,7 +11,7 @@ _LOGGER = logging.getLogger(__name__)
 
 class AntistormUpdateCoordinator(DataUpdateCoordinator[AntistormData]):
 
-    def __init__(self, hass: HomeAssistant, city_id: int):
+    def __init__(self, hass: HomeAssistant, city_id: int) -> None:
         super().__init__(hass, _LOGGER, name=DOMAIN, update_interval=DEFAULT_UPDATE_INTERVAL,
                          update_method=self.update_method)
         self.connector = AntistormConnector(city_id)
