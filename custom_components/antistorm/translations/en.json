@@ -17,8 +17,8 @@
       "storm_alarm": {
         "name": "Storm Alarm"
       },
-      "rain_alarm": {
-        "name": "Rain Alarm"
+      "precipitation_alarm": {
+        "name": "Precipitation Alarm"
       },
       "storm_active": {
         "name": "Storm Active"

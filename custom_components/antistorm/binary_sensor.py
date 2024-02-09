@@ -35,8 +35,8 @@ entity_descriptions = [
         value_fn=lambda data: data.storm_alarm,
     ),
     AntistormBinarySensorEntityDescription(
-        key='rain_alarm',
-        translation_key='rain_alarm',
+        key='precipitation_alarm',
+        translation_key='precipitation_alarm',
         icon="mdi:weather-pouring",
         value_fn=lambda data: data.precipitation_alarm,
     ),
