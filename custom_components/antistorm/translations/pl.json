@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Podaj nazwę miasta dla którego chcesz skonfigurować integrację.",
+        "data": {
+          "city_name": "Nazwa miasta"
+        }
+      }
+    },
+    "error": {
+      "city_not_found": "Nie znaleziono miasta"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "storm_alarm": {
+        "name": "Alarm Burzowy"
+      },
+      "precipitation_alarm": {
+        "name": "Alarm Opadów"
+      },
+      "storm_active": {
+        "name": "Aktywna Burza"
+      }
+    },
+    "sensor": {
+      "storm_probability": {
+        "name": "Prawdopodobieństwo Burzy"
+      },
+      "storm_time": {
+        "name": "Czas do Burzy"
+      },
+      "precipitation_probability": {
+        "name": "Prawdopodobieństwo Opadów"
+      },
+      "precipitation_time": {
+        "name": "Czas do Opadów"
+      }
+    }
+  }
+}

@@ -18,64 +18,38 @@
 [downloads_total_shield]: https://img.shields.io/github/downloads/PiotrMachowski/Home-Assistant-custom-components-Antistorm/total
 
 
-# Antistorm sensor
+# Antistorm
 
-This sensor uses official API to get storm warnings from [*Antistorm*](https://antistorm.eu/). For more precise explanation of parameters visit [*Antistorm.eu*](https://antistorm.eu/deweloperzy.php).
+This integration returns storm and precipitation warnings from [*Antistorm*](https://antistorm.eu/).
 
-## Configuration options
+## Configuration
 
-| Key | Type | Required | Default | Description |
-| --- | --- | --- | --- | --- |
-| `name` | `string` | `False` | `Antistorm` | Name of sensor |
-| `station_id` | `positive int` | `True` | - | ID of monitored station |
-| `monitored_conditions` | `list` | `True` | - | List of conditions to monitor |
+To configure this integration search for `Antistorm` on *Integrations* page.
+Alternatively you can just use the button below:
 
-### Possible monitored conditions
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=antistorm)
 
-#### Binary sensor
-| Key | Description |
-| --- | --- | 
-| `storm_alarm` | Status of storm alarm |
-| `rain_alarm` | Status of rain alarm |
-| `storm_active` | Active storm |
+Available binary sensors:
+ - Storm Alarm
+ - Precipitation Alarm
+ - Storm Active
 
-#### Sensor
-| Key | Description |
-| --- | --- | 
-| `storm_probability` | Probability of storm |
-| `storm_time` | Estimated time until storm |
-| `rain_probability` | Probability of rain |
-| `rain_time` | Estimated time until rain |
+Available sensors:
+ - Storm Probability
+ - Time to Storm
+ - Precipitation Probability
+ - Time to Precipitation
 
-## Example usage
-
-```
-binary_sensor:
-  - platform: antistorm
-    station_id: 408
-    monitored_conditions:
-      - 'storm_alarm'
-      - 'rain_alarm'
-      - 'storm_active'
-```
-
-```
-sensor:
-  - platform: antistorm
-    station_id: 408
-    monitored_conditions:
-      - 'storm_probability'
-      - 'storm_time'
-      - 'rain_probability'
-      - 'rain_time'
-```
+For more precise explanation of parameters visit [*Antistorm.eu*](https://antistorm.eu/deweloperzy.php).
 
 ## Installation
 
 ### Using [HACS](https://hacs.xyz/) (recommended)
 
 This integration can be installed using HACS.
-To do it search for `Antistorm` in *Integrations* section.
+To do it search for `Antistorm` in *Integrations* section, or just use the buton below.
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=PiotrMachowski&repository=Home-Assistant-custom-components-Antistorm&category=Integration)
 
 ### Manual
 
@@ -88,12 +62,6 @@ unzip antistorm.zip
 rm antistorm.zip
 ```
 
-
-## FAQ
-
-* **How to get value for `station_id`?**
-
-  To find out `station_id` use widget code generator available at page [*Antistorm.eu*](https://antistorm.eu/deweloperzy.php).
 
 
 <!-- piotrmachowski_support_links_start -->
