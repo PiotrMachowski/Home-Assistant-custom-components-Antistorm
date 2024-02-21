@@ -1,6 +1,7 @@
 [![HACS Default][hacs_shield]][hacs]
 [![GitHub Latest Release][releases_shield]][latest_release]
-[![GitHub All Releases][downloads_total_shield]][releases]<!-- piotrmachowski_support_badges_start -->
+[![GitHub All Releases][downloads_total_shield]][releases]
+[![Installations][installations_shield]][releases]<!-- piotrmachowski_support_badges_start -->
 [![Ko-Fi][ko_fi_shield]][ko_fi]
 [![buycoffee.to][buycoffee_to_shield]][buycoffee_to]
 [![PayPal.Me][paypal_me_shield]][paypal_me]
@@ -17,6 +18,7 @@
 [releases]: https://github.com/PiotrMachowski/Home-Assistant-custom-components-Antistorm/releases
 [downloads_total_shield]: https://img.shields.io/github/downloads/PiotrMachowski/Home-Assistant-custom-components-Antistorm/total
 
+[installations_shield]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fanalytics.home-assistant.io%2Fcustom_integrations.json&query=%24.antistorm.total&style=popout&color=41bdf5&label=analytics
 
 # Antistorm
 
